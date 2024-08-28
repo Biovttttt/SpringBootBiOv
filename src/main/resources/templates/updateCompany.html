@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/api/companies/{id}/update(id=${updateCompany.getId()})}" th:=object="${updateCompany}">
+
+    <label for="name">name</label>
+    <input th:field="*{name}" id="name">
+
+    <label for="country">country</label>
+    <input th:field="*{country}" id="country">
+
+    <label for="address">address</label>
+    <input th:field="*{address}" id="address">
+
+    <label for="phoneNumber">phoneNumber</label>
+    <input th:field="*{phoneNumber}" id="phoneNumber">
+
+    <br>
+    <br>
+    <br>
+
+    <input type="submit" value="Save Company">
+
+</form>
+
+</body>
+</html>

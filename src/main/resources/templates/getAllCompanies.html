@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+
+<div>
+    <table border="2">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Address</th>
+            <th>PhoneNumber</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        <tr th:each="company:${allCompanies}">
+            <td th:text="${company.getId()}">Id</td>
+            <td th:text="${company.getName}">Name</td>
+            <td th:text="${company.getAddress}">Address</td>
+            <td th:text="${company.getPhoneNumber}">PhoneNumber</td>
+
+            <td><a th:href="@{/api/companies/{id}/getCompany (id=${company.getId()})}">Update</a></td>
+            <td><a th:href="@{/api/companies/{id}/delete (id=${company.getId()})}">Delete</a></td>
+            <td><a th:href="@{/post/{companyId}(companyId=${company.getId})}">Posts</a></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <a href="/api/companies/new">
+        <button type="button">Create Company</button>
+    </a>
+
+</div>
+
+
+</body>
+</html>

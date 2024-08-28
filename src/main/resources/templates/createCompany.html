@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+<form action="/api/companies/save" th:action="@{/api/companies/save}" th:object="${newCompany}" method="POST">
+<!--<form action="/api/companies/new" method="POST">-->
+<!--<form action="" th:action="@{save}" th:object="${newCompany}" method="POST">-->
+<!--<form  th:action="@{/save}" th:=object="${newCompany}" th:method="post">-->
+
+    <label for="name">name</label>
+    <input  id="name" th:field="*{name}">
+
+    <label for="country">country</label>
+    <input th:field="*{country}" id="country">
+
+    <label for="address">address</label>
+    <input th:field="*{address}" id="address">
+
+    <label for="phoneNumber">phoneNumber</label>
+    <input th:field="*{phoneNumber}" id="phoneNumber">
+
+    <br>
+    <br>
+    <br>
+
+    <input type="submit" value="Save Company">
+
+</form>
+</body>
+</html>
