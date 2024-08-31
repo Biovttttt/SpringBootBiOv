@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form th:method="POST" th:action="@{/api/companies/{id}/update(id=${updateCompany.getId()})}" th:=object="${updateCompany}">
+<form th:method="POST" th:action="@{/api/companies/{id}/update(id=${updateCompany.getId()})}" th:object="${updateCompany}">
 
     <label for="name">name</label>
     <input th:field="*{name}" id="name">

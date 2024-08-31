@@ -58,6 +58,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-clean-plugin -->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.maven.plugins</groupId>-->
+<!--            <artifactId>maven-clean-plugin</artifactId>-->
+<!--            <version>3.4.0</version>-->
+<!--        </dependency>-->
+
     </dependencies>
 
     <build>

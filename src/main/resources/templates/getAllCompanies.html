@@ -18,13 +18,13 @@
             <th>Update</th>
             <th>Delete</th>
         </tr>
-        <tr th:each="company:${allCompanies}">
+        <tr th:each="company:${companies}">
             <td th:text="${company.getId()}">Id</td>
+            <td th:text="${company.getCountry()}">Id</td>
             <td th:text="${company.getName}">Name</td>
             <td th:text="${company.getAddress}">Address</td>
             <td th:text="${company.getPhoneNumber}">PhoneNumber</td>
-
-            <td><a th:href="@{/api/companies/{id}/getCompany (id=${company.getId()})}">Update</a></td>
+            <td><a th:href="@{/api/companies/{id}/get (id=${company.getId()})}">Update</a></td>
             <td><a th:href="@{/api/companies/{id}/delete (id=${company.getId()})}">Delete</a></td>
             <td><a th:href="@{/post/{companyId}(companyId=${company.getId})}">Posts</a></td>
         </tr>
